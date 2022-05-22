@@ -19,6 +19,16 @@ def PrintRoster():
         print(str(full_name.title()))
         counter += 1
 
+def PosNumbers():
+    defence = data.count("\"D\"")
+    left = data.count("\"LW\"")
+    right = data.count("\"RW\"")
+    center = data.count("\"C\"")
+    goalie = data.count("\"G\"")
+    print("Defencemen: " + str(defence) + "\n" + "Left Wingers: " + str(left) + "\n" + "Right Wingers: " + str(right) + "\n" + "Centers: " + str(center) + "\n" + "Goalies: " + str(goalie))
+
+
+
 
 team = input("Please input team: ")
 
@@ -33,3 +43,4 @@ response = requests.request("GET", url)
 data = response.text.split()
 
 PrintRoster()
+PosNumbers()
